@@ -1,0 +1,141 @@
+
+
+.PageContainer{
+position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    border-radius: 28px 28px 0 0;
+    background: #FFF;
+    
+    width: 1200px;
+    
+    padding: 40px;
+    height: auto;
+}
+
+
+
+
+
+.TopMessage 
+{color: #000;
+
+font-family: "InkLipquid";
+font-size: 60px;
+font-style: normal;
+font-weight: 400;
+line-height: var(--Static-Display-Small-Line-Height, 44px); /* 91.667% */
+letter-spacing: var(--Static-Display-Small-Tracking, 0px);
+
+margin-top: -15px;
+}
+
+.Label {
+    color: rgba(29, 27, 32, 0.80);
+
+font-family: 'omyu_pretty';
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 116.667% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0px);
+ white-space: nowrap;
+}
+
+.TitleInput {
+    width : 100%;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: #FFF7F3;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10);
+    border: 1px solid #ddd;
+    max-width: 1200px ;
+}
+
+.ContentArea{
+  width : 100%;
+  height: 300px;
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fef3f0;
+  resize: none;
+  box-sizing: border-box;
+  
+}
+
+.TitleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* 라벨과 입력 박스 사이 간격 */
+  margin-bottom: 20px; 
+}
+
+.CategoryRow {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* 라벨과 입력 박스 사이 간격 */
+  margin-bottom: 20px; 
+}
+
+.ContentRow {
+  display: flex;
+  align-items: flex-start; /* ✅ 위 기준 맞춤 */
+  gap: 16px;
+  width: 100%;
+  
+  box-sizing: border-box;
+}
+
+.BottomContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    
+    margin-top: 16px; /* 살짝 띄움 */
+    box-sizing: border-box;
+}
+
+.mainbox {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.CategoryButton {
+  padding: 6px 12px; /* 내부 여백으로 자연스럽게 */
+  border-radius: 20px;
+  border: 0.7px solid rgba(0, 0, 0, 0.20);
+  background: rgba(217, 217, 217, 0.40);
+  font-size: 16px;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  margin-right: 8px;
+}
+
+.ProfileBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+   justify-content: flex-end;
+   margin-top: 15px;
+}
+
+.ProfileCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ddd; /* 회색 동그라미 */
+}
+
+.ProfileName {
+  font-family: 'omyu_pretty';
+  font-size: 34px;
+}
