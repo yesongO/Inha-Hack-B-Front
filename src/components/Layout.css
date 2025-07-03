@@ -1,0 +1,118 @@
+.layout-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-border {
+    width: 76px;
+    background-color: #FFE7DC;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ham-btn {
+    background: none;
+    border: none;
+    color: #444444;
+    font-size: 35px;
+    margin-top: 24px;
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+/* 햄버거 버튼 포커스 시 테두리 생기는거 제거하기 */
+.ham-btn:focus,
+.ham-btn:focus-visible {
+    outline: none !important;   
+    box-shadow: none !important;
+}
+
+.side-menu {
+    position: absolute;
+    top: 24px;
+    left: 76px;
+    width: 160px;
+    height: 400px;
+    background-color: #FFFAF8;
+    border-top-right-radius: 8%;
+    border-top-left-radius: 28px;
+    border-bottom-right-radius: 8%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+
+    opacity: 0;
+    transform: translateX(-5px);
+    pointer-events: none; /* 중요: 클릭 무시 */
+    transition: all 0.2s ease;
+}
+
+.side-logo {
+    font-family: 'InkLipquid', sans-serif;
+    font-size: 3rem;
+    color: #976752;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.side-page {
+    font-family: 'omyu_pretty', sans-serif;
+    font-size: 24px;
+    color: #444444;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* 방문한 링크 (보라색 방지!) */
+.side-page a:visited {
+    color: #444444;
+}
+
+/* 호버 시 색상 */
+.side-page a:hover {
+    color: #bd5143;
+}
+
+.side-menu.open {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto; /* 중요: 클릭 가능하도록 */
+}
+
+.side-write {
+    width: 45px;
+    height: 45px;
+}
+
+.side-profile {
+    width: 45px;
+    height: 33px;
+    border-radius: 38%;
+}
+
+
+.right-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-border {
+    height: 24px;
+    background-color: #FFE7DC;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 28px 28px 0 0;
+}
+
