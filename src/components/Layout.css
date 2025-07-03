@@ -34,12 +34,13 @@
     position: absolute;
     top: 24px;
     left: 76px;
-    width: 160px;
+    width: 140px;
     height: 400px;
     background-color: #FFFAF8;
-    border-top-right-radius: 8%;
+    border-top-right-radius: 28px;
     border-top-left-radius: 28px;
-    border-bottom-right-radius: 8%;
+    border-bottom-right-radius: 28px;
+    border: 1px solid #F2DFDF;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -54,7 +55,7 @@
 
 .side-logo {
     font-family: 'InkLipquid', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #976752;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -62,7 +63,7 @@
 
 .side-page {
     font-family: 'omyu_pretty', sans-serif;
-    font-size: 24px;
+    font-size: 1.3rem;
     color: #444444;
     display: flex;
     flex-direction: column;

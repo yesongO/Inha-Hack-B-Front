@@ -1,10 +1,27 @@
 import React from "react";
 import Layout from '../components/Layout';
+import Topbar from '../components/Topbar';
+import './MainPage.css';
+
+import { AiFillStar } from 'react-icons/ai';
+import { BsBookmarkFill } from 'react-icons/bs';
 
 export default function MainPage() {
     return (
         <Layout>
-            <p>메인페이지입니다.</p>
+            <Topbar />
+            <div className="coral-box">
+                <p style={{fontSize: '3rem', marginTop: '0px'}}>사람이 건네는 답, 진심인</p>
+                <p style={{color: 'white', fontSize: '1.7rem', margin: 0}}>안녕하세요, OO님.</p>
+                <p style={{color: 'white', fontSize: '2.2rem', margin: 0}}>지금 당신의 마음을 톡-- 두드린 궁금증은?</p>
+            </div>
+            <div className="btn-container">
+                <button className="btn-1"><AiFillStar size={20} color='white'/>실시간 인기 카테고리</button>
+                <button className="btn-2"><BsBookmarkFill size={20} color='#686D76'/>내 카테고리</button>
+            </div>
         </Layout>
     );
 }
+
+// <Topbar />
+// <FiSearch size={35} color='#686D76'/>

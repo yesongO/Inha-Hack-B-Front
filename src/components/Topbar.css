@@ -1,0 +1,44 @@
+.topbar-container {
+    display: flex;
+    height: 42px;
+    padding: 0px 20px;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.topbar-search {
+    flex: 1;
+    max-width: 100vw;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: #FFF7F3;
+    border: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.topbar-right {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-page {
+    color: #686D76;
+    transition: color 0.2s ease;
+}
+
+/* 방문한 링크 (보라색 방지!) */
+.profile-page a:visited {
+    color: #444444;
+}
+
+/* 호버 시 색상 */
+.profile-page a:hover {
+    color: #bd5143;
+}
+

@@ -38,9 +38,9 @@ export default function Layout({ children }) {
                 <button className='ham-btn' onClick={toggleHam}><FiMenu /></button>
 
                 <button className='side-write'></button>
-                <p style={{fontSize:'14px', marginTop:'3px'}}>글쓰기</p>
+                <p style={{fontSize:'14px', marginTop:'3px', color:'#444444'}}>글쓰기</p>
                 <button className='side-profile'></button>
-                <p style={{fontSize: '14px', marginTop:'3px'}}>내 프로필</p>
+                <p style={{fontSize: '14px', marginTop:'3px', color:'#444444'}}>내 프로필</p>
             </div>
 
             <div ref={hamRef} className={`side-menu ${hamOpen ? 'open' : ''}`}>
