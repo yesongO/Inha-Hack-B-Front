@@ -46,7 +46,7 @@ export default function Layout({ children }) {
             <div ref={hamRef} className={`side-menu ${hamOpen ? 'open' : ''}`}>
                 <p className='side-logo'>진심인</p>
                 <div className='side-page'>
-                    <a href="/">메인페이지</a>
+                    <a href="/main">메인페이지</a>
                     <img src="/side_line.png" style={{width: '95px', marginTop: '0px'}}/>
                     <a href="/profile">나의페이지</a>
                     <img src="/side_line.png" style={{width: '95px'}}/>
