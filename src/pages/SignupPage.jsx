@@ -19,7 +19,12 @@ export default function SignupPage() {
         .then(res => {
             const newUserId = res.data.id;
             console.log("회원가입 성공", res.data);
+
+            // localStroage에 userId 저장
+            localStorage.setItem("userId", newUserId);
+            // CreateProfile 페이지에 userId 저장
             navigate('/create-profile', { state: { userId: newUserId } });
+            
         })
         .catch(err => {
             console.error("회원가입 실패:", err);

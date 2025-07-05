@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  appType: 'spa',
   server: {
     proxy: {
       // /main 으로 시작하는 요청 백엔드로 프록시
@@ -31,5 +32,6 @@ export default defineConfig({
         secure: false,
       },
     },
+    historyApiFallback: true
   },
 })

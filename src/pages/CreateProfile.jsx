@@ -33,7 +33,12 @@ export default function CreateProfile() {
         axios.post('/main/profiles/', data)
         .then(() => {
             console.log("프로필 생성 성공");
-            navigate('/main', { state: { nickname: userName}});
+
+            // localStorage에 nickname 저장
+            localStorage.setItem("nickname", userName);
+            // MainPage 에 nickname 보내기
+            navigate('/mainp', { state: { nickname: userName}});
+
         })
         .catch(err => {
             console.error("프로필 생성 실패", err);

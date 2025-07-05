@@ -1,16 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+
 import Layout from '../components/Layout';
 import Topbar from '../components/Topbar';
+import Category from '../components/Category';
+
 import './MainPage.css';
 
 import { AiFillStar } from 'react-icons/ai';
 import { BsBookmarkFill } from 'react-icons/bs';
+//-----------------------------------------------------------
 
 export default function MainPage() {
     const location = useLocation();
-    const nickname = location.state?.nickname || "OO";
+    // const nickname = location.state?.nickname || "OO";
+
+    // localStorage에 있는 userId와 nickname 불러오기
+    const nickname = localStorage.getItem("nickname") || "OO";
+    const userId = localStorage.getItem("userId");
+
+    const categories = [
+        {
+            title: "연애 카테고리",
+            image: "/heart.png",
+            badge: "사랑의큐피트",
+            link: "/category/love",
+        },
+    ]
 
     return (
         <Layout>
@@ -23,6 +40,17 @@ export default function MainPage() {
             <div className="btn-container">
                 <button className="btn-1"><AiFillStar size={20} color='white'/>실시간 인기 카테고리</button>
                 <button className="btn-2"><BsBookmarkFill size={20} color='#686D76'/>내 카테고리</button>
+            </div>
+            <div className="cat-list">
+                {categories.map((cat, idx) => (
+                    <Category 
+                        key={idx}
+                        title={cat.title}
+                        badge={cat.badge}
+                        image={cat.image}
+                        link={cat.link}
+                    />
+                ))}
             </div>
         </Layout>
     );

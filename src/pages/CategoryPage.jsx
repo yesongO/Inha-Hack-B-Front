@@ -2,7 +2,7 @@ import React from "react";
 import Layout from '../components/Layout';
 import Topbar from '../components/Topbar';
 
-export default function MainPage() {
+export default function CategoryPage() {
     return (
         <Layout>
             <Topbar />

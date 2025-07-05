@@ -36,3 +36,13 @@
     gap: 8px;
     border-radius: 10px 28px 28px 10px;
   }
+
+  .cat-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 16px 0px;
+    box-sizing: border-box;
+  }

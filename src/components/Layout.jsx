@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from "react-router-dom";
 import './Layout.css';
 import { FiMenu } from 'react-icons/fi';
 
@@ -46,13 +47,13 @@ export default function Layout({ children }) {
             <div ref={hamRef} className={`side-menu ${hamOpen ? 'open' : ''}`}>
                 <p className='side-logo'>진심인</p>
                 <div className='side-page'>
-                    <a href="/main">메인페이지</a>
+                    <Link to="/mainp">메인페이지</Link>
                     <img src="/side_line.png" style={{width: '95px', marginTop: '0px'}}/>
-                    <a href="/profile">나의페이지</a>
+                    <Link to="/profile">나의페이지</Link>
                     <img src="/side_line.png" style={{width: '95px'}}/>
-                    <a href="/category">카테고리페이지</a>
+                    <Link to="/category">카테고리페이지</Link>
                     <img src="/side_line.png" style={{width: '130px'}}/>
-                    <a href="/write">글쓰기페이지</a>
+                    <Link to="/write">글쓰기페이지</Link>
                     <img src="/side_line.png" style={{width: '110px'}}/>
                     <p style={{color: '#7D7C7C', marginTop: '90px'}}>진심인의 철학</p>
                 </div>
