@@ -6,6 +6,7 @@ import MainPage from './pages/MainPage';
 import ProfilePage from './pages/ProfilePage';
 import CategoryPage from './pages/CategoryPage';
 import WritePage from './pages/WritePage';
+import ViewPage_Q from "./pages/ViewPage_Q";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/category" element={<CategoryPage />} />
         <Route path="/write" element={<WritePage />} />
+        <Route path="/viewpage-q" element={<ViewPage_Q />} />
       </Routes>
     </Router>
   )
