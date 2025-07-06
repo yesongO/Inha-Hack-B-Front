@@ -55,7 +55,7 @@ export default function Layout({ children }) {
                     <img src="/side_line.png" style={{width: '130px'}}/>
                     <Link to="/write">글쓰기페이지</Link>
                     <img src="/side_line.png" style={{width: '110px'}}/>
-                    <p style={{color: '#7D7C7C', marginTop: '90px'}}>진심인의 철학</p>
+                    <p style={{color: '#7D7C7C', marginTop: '35px'}}>진심인의 철학</p>
                 </div>
             </div>
 

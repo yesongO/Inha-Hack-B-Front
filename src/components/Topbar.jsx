@@ -16,7 +16,7 @@ export default function Topbar() {
             />
             <div className="topbar-right">
                 <a className="profile-page" href="/profile" style={{fontFamily:'omyu_pretty', fontSize:'20px'}}>나의페이지</a>
-                <AiFillBell size={30} color='#DF9C9B'/>
+                <AiFillBell className="bell-icon" size={30} />
             </div>
         </div>
     )

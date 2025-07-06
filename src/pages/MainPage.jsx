@@ -7,6 +7,7 @@ import Topbar from '../components/Topbar';
 import Category from '../components/Category';
 
 import './MainPage.css';
+import { categories } from "../data/categories";
 
 import { AiFillStar } from 'react-icons/ai';
 import { BsBookmarkFill } from 'react-icons/bs';
@@ -19,15 +20,6 @@ export default function MainPage() {
     // localStorage에 있는 userId와 nickname 불러오기
     const nickname = localStorage.getItem("nickname") || "OO";
     const userId = localStorage.getItem("userId");
-
-    const categories = [
-        {
-            title: "연애 카테고리",
-            image: "/heart.png",
-            badge: "사랑의큐피트",
-            link: "/category/love",
-        },
-    ]
 
     return (
         <Layout>
@@ -49,6 +41,7 @@ export default function MainPage() {
                         badge={cat.badge}
                         image={cat.image}
                         link={cat.link}
+                        description={cat.description}
                     />
                 ))}
             </div>

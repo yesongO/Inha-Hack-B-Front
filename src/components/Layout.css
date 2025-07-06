@@ -35,7 +35,7 @@
     top: 24px;
     left: 76px;
     width: 140px;
-    height: 400px;
+    height: 300px;
     background-color: #FFFAF8;
     border-top-right-radius: 28px;
     border-top-left-radius: 28px;
@@ -67,7 +67,11 @@
     color: #444444;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+}
+
+.side-page img {
+    display: block;
+    margin: 0 0 10px 0;
 }
 
 /* 방문한 링크 (보라색 방지!) */

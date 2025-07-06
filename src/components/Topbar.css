@@ -42,3 +42,12 @@
     color: #bd5143;
 }
 
+.bell-icon {
+    color: #DF9C9B;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.bell-icon:hover {
+    color: #f2c9ba;
+}
