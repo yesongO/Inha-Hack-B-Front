@@ -1,0 +1,93 @@
+.profile-cont h2,
+.profile-cont .job{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.title-p {
+    font-family: InkLipquid;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.profile-cont {
+    display: flex;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-job {
+    display: flex;
+    align-items: baseline;
+    margin-top: 15px;
+    margin-left: 10px;
+    gap: 20px;
+}
+
+.job {
+    font-size: 1rem;
+    color: #666;
+}
+
+.bio {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: InkLipquid;
+    font-size: 1.5rem;
+    color: #222222;
+}
+
+/* // 뱃지 CSS */
+.badge-section {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.badge-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f7bea3;
+}
+
+.badge-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px dashed #ccc;
+    background-color: #f2f2f2;
+}
+
+.badge-name {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #555;
+    font-family: 'omyu_pretty';
+}
