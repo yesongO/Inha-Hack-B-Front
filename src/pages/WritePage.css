@@ -143,3 +143,14 @@ letter-spacing: var(--Static-Title-Large-Tracking, 0px);
   font-family: 'omyu_pretty';
   font-size: 1.5rem;
 }
+
+.ContentTitle {
+  color: #000;
+
+font-family: "Hakgyoansim Chilpanjiugae OTF";
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: var(--Static-Title-Large-Line-Height, 28px); /* 100% */
+letter-spacing: var(--Static-Title-Large-Tracking, 0px);
+}
