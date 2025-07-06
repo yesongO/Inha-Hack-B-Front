@@ -47,15 +47,19 @@ export default function Layout({ children }) {
             <div ref={hamRef} className={`side-menu ${hamOpen ? 'open' : ''}`}>
                 <p className='side-logo'>진심인</p>
                 <div className='side-page'>
+                    <div style={{display: "flex", alignItems: "center", }}>
+                        <img src="/side_line.png" style={{width: '100px', marginBottom: '5px'}} />
+                        <span>💌</span>
+                    </div>
                     <Link to="/mainp">메인페이지</Link>
-                    <img src="/side_line.png" style={{width: '95px', marginTop: '0px'}}/>
+                    {/* <img src="/side_line.png" style={{width: '109px', marginTop: '0px'}}/> */}
                     <Link to="/profile">나의페이지</Link>
-                    <img src="/side_line.png" style={{width: '95px'}}/>
+                    {/* <img src="/side_line.png" style={{width: '109px'}}/> */}
                     <Link to="/category">카테고리페이지</Link>
-                    <img src="/side_line.png" style={{width: '130px'}}/>
+                    {/* <img src="/side_line.png" style={{width: '130px'}}/> */}
                     <Link to="/write">글쓰기페이지</Link>
-                    <img src="/side_line.png" style={{width: '110px'}}/>
-                    <p style={{color: '#7D7C7C', marginTop: '35px'}}>진심인의 철학</p>
+                    {/* <img src="/side_line.png" style={{width: '112px'}}/> */}
+                    {/* <p style={{color: '#7D7C7C', marginTop: '35px'}}>진심인의 철학</p> */}
                 </div>
             </div>
 

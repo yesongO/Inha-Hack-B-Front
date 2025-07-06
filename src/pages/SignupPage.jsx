@@ -24,7 +24,7 @@ export default function SignupPage() {
             localStorage.setItem("userId", newUserId);
             // CreateProfile 페이지에 userId 저장
             navigate('/create-profile', { state: { userId: newUserId } });
-            
+
         })
         .catch(err => {
             console.error("회원가입 실패:", err);
@@ -33,8 +33,8 @@ export default function SignupPage() {
     };
 
     return (
-        <div style={{ padding: "2rem" }}>
-            <h2>진심인의 회원이 되어주세요.</h2>
+        <div style={{width: "100vw", display:"flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+            <h2 style={{fontFamily: "Ownglyph_ryurue-Rg", fontSize: "2rem"}}>진심인의 회원이 되어주세요.</h2>
             <div style={{ marginBottom: "1rem" }}>
             <input
                 type="text"

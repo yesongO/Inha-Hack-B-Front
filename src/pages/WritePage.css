@@ -125,6 +125,11 @@ letter-spacing: var(--Static-Title-Large-Tracking, 0px);
   margin-right: 8px;
 }
 
+.CategoryButton.selected {
+  background-color: #ffcccc;
+  color: #fff;
+}
+
 .ProfileBox {
   display: flex;
   align-items: center;

@@ -13,7 +13,7 @@ export default function ProfilePage() {
 
     // 뱃지 데이터 리스트
     const badgeList = [
-        {name: "첫 진심", image: "/badge_basic", earned: true},
+        {name: "첫 진심", image: "/badge_basic.png", earned: true},
     ]
 
     // 조회용
@@ -48,7 +48,13 @@ export default function ProfilePage() {
     }, []);
 
     if (!profile) {
-        return <p>프로필을 불러오는 중...</p>;
+        return (
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',
+                fontFamily: 'InkLipquid', fontSize: '2rem',
+            }}>
+                Loading...
+            </div>
+        );
     }
 
 
