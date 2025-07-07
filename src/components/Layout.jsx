@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './Layout.css';
 import { FiMenu } from 'react-icons/fi';
@@ -7,6 +8,8 @@ import { FiMenu } from 'react-icons/fi';
 //-- 모든 페이지에서 넣어 줄 테두리 레이아웃
 
 export default function Layout({ children }) {
+    const navigate = useNavigate();
+
     const [hamOpen, setHamOpen] = useState(false);
     const hamRef = useRef(null);
 
@@ -38,10 +41,16 @@ export default function Layout({ children }) {
             <div className='left-border'>
                 <button className='ham-btn' onClick={toggleHam}><FiMenu /></button>
 
-                <button className='side-write'></button>
-                <p style={{fontSize:'14px', marginTop:'3px', color:'#444444'}}>글쓰기</p>
-                <button className='side-profile'></button>
-                <p style={{fontSize: '14px', marginTop:'3px', color:'#444444'}}>다크모드</p>
+                <button className='side-write'
+                        onClick={() => navigate("/write")} 
+                        style={{display: "flex", justifyContent: "center", alignItems: "center",}}>
+                    <img src="/pen.png" style={{width: "20px"}}/>
+                </button>
+                <p style={{fontSize:'13px', marginTop:'3px', color:'#444444'}}>글쓰기</p>
+                <button className='side-profile' style={{display: "flex", justifyContent: "center", alignItems: "center",}}>
+                    <img src="/moon.png" style={{width: "20px"}}/>
+                </button>
+                <p style={{fontSize: '13px', marginTop:'3px', color:'#444444'}}>다크모드</p>
             </div>
 
             <div ref={hamRef} className={`side-menu ${hamOpen ? 'open' : ''}`}>

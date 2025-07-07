@@ -13,7 +13,7 @@ export default function ProfilePage() {
 
     // 뱃지 데이터 리스트
     const badgeList = [
-        {name: "첫 진심", image: "/badge_basic.png", earned: true},
+        {name: "첫 진심", image: "/jinsim_badge.png", earned: true},
     ]
 
     // 조회용

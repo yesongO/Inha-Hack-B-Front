@@ -48,7 +48,7 @@ export default function CategoryPage() {
             <p>카테고리페이지입니다.</p>
 
             {/* //-- 카테고리 등록하는 버튼 */}
-            <button onClick={handleCategorySeed} style={{
+            {/* <button onClick={handleCategorySeed} style={{
                     padding: '8px 16px',
                     backgroundColor: '#f7a69e',
                     color: 'white',
@@ -58,10 +58,11 @@ export default function CategoryPage() {
                     marginBottom: '20px'
                 }}>
                     🔄 전체 카테고리 등록하기
-            </button>
+            </button> */}
             
             {/* //-- 카테고리 조회 및 입력 버튼 */}
-            <input
+
+            {/* <input
                 type="number"
                 placeholder="조회할 카테고리 ID"
                 value={categoryId}
@@ -84,13 +85,12 @@ export default function CategoryPage() {
                 }}>
                     🔍 카테고리 조회
             </button>
-            {/* 조회 결과 표시 */}
             {fetchedCategory && (
                     <div style={{ marginTop: '10px', padding: '10px', background: '#f9f9f9', borderRadius: '10px' }}>
                         <h4>📦 조회된 카테고리</h4>
                         <pre>{JSON.stringify(fetchedCategory, null, 2)}</pre>
                     </div>
-            )}
+            )} */}
 
             {error && (
                     <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>

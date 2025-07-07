@@ -47,48 +47,106 @@ export default function CreateProfile() {
     };
 
     return (
-        <div style={{ padding: "2rem" }}>
-            <h2>프로필 생성</h2>
-    
-            <div style={{ marginBottom: "1rem" }}>
+        <div style={{ width: "100vw", display: "flex", flexDirection: "column",
+            justifyContent: "center", alignItems: "center"
+        }}>
+            <h2 style={{ fontFamily: "InkLipquid", fontSize: "2.5rem", marginBottom: "2rem"}}>
+                진심인에서 사용할 프로필을 생성해주세요 🥰</h2>
+
+            {/* 닉네임 */}
+            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "100%", width: "400px"}}>
+            <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>닉네임</label>
             <input
                 type="text"
-                placeholder="닉네임"
+                placeholder="닉네임을 입력해주세요"
                 value={userName}
                 onChange={e => setUserName(e.target.value)}
+                style={{
+                width: "100%",
+                padding: "0.75rem",
+                borderRadius: "8px",
+                border: "1px solid #ccc",
+                fontSize: "0.8rem"
+                }}
             />
             </div>
     
-            <div style={{ marginBottom: "1rem" }}>
-            <input
-                type="text"
-                placeholder="직업 (예: 프론트엔드 개발자)"
-                value={job}
-                onChange={e => setJob(e.target.value)}
-            />
+            {/* 직업 */}
+            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "400px" }}>
+                <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>직업</label>
+                <input
+                    type="text"
+                    placeholder="예: 프론트엔드 개발자"
+                    value={job}
+                    onChange={e => setJob(e.target.value)}
+                    style={{
+                        width: "100%",
+                        padding: "0.75rem",
+                        borderRadius: "8px",
+                        border: "1px solid #ccc",
+                        fontSize: "0.8rem"
+                    }}
+                />
             </div>
-    
-            <div style={{ marginBottom: "1rem" }}>
+            
+            {/* 한줄소개 */}
+            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "400px" }}>
+            <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>소개</label>
             <input
                 type="text"
-                placeholder="한줄소개"
+                placeholder="한줄소개를 입력해주세요"
                 value={bio}
                 onChange={e => setBio(e.target.value)}
+                style={{
+                width: "100%",
+                padding: "0.75rem",
+                borderRadius: "8px",
+                border: "1px solid #ccc",
+                fontSize: "0.8rem"
+                }}
             />
             </div>
-    
-            <div style={{ marginBottom: "1rem" }}>
+
+            {/* 이미지 URL */}
+            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "400px" }}>
+            <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>이미지</label>
             <input
                 type="text"
-                placeholder="프로필 이미지 URL"
+                placeholder="이미지 주소를 붙여넣어주세요"
                 value={imageUrl}
                 onChange={e => setImageUrl(e.target.value)}
+                style={{
+                width: "100%",
+                padding: "0.75rem",
+                borderRadius: "8px",
+                border: "1px solid #ccc",
+                fontSize: "0.8rem"
+                }}
             />
             </div>
-    
-            <button onClick={handleCreateProfile}>프로필 생성</button>
-    
-            {message && <p style={{ color: "red", marginTop: "1rem" }}>{message}</p>}
+
+            {/* 메시지와 버튼 */}
+            {message && (
+                <p style={{ color: "red", marginTop: "0.5rem" }}>{message}</p>
+            )}
+
+            <button onClick={handleCreateProfile}
+                style={{
+                fontSize: "0.9rem",
+                color: "#444",
+                backgroundColor: "rgb(247, 212, 201)",
+                padding: "0.6rem 1.5rem",
+                marginTop: "40px",
+                border: "none",
+                borderRadius: "20px",
+                boxShadow: "0 4px 4px rgba(0,0,0,0.1)",
+                transition: "all 0.2s ease-in-out",
+                cursor: "pointer",
+                }}>
+                프로필 생성
+            </button>
         </div>
     );
 }
+
+

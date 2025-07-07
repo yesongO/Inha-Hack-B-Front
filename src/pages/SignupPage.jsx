@@ -28,31 +28,64 @@ export default function SignupPage() {
         })
         .catch(err => {
             console.error("회원가입 실패:", err);
-            setMessage("이미 존재하는 아이디입니다.🥹 다른 아이디로 시도해주세요.")
+            setMessage("앗, 이미 존재하는 아이디네요. 다른 아이디로 시도해주세요 :)")
         });
     };
 
     return (
         <div style={{width: "100vw", display:"flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-            <h2 style={{fontFamily: "Ownglyph_ryurue-Rg", fontSize: "2rem"}}>진심인의 회원이 되어주세요.</h2>
-            <div style={{ marginBottom: "1rem" }}>
-            <input
-                type="text"
-                placeholder="아이디를 입력하세요"
-                value={loginId}
-                onChange={e => setLoginId(e.target.value)}
-            />
+            <h2 style={{fontFamily: "Ownglyph_ryurue-Rg", fontSize: "3rem"}}>진심인의 회원이 되어주세요. 💌</h2>
+            <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-end", }}>
+                <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "350px"}}>
+                    <label style={{display: "block", textAlign: "right", width: "100px", marginRight: "20px"}}>아이디</label>
+                    <input
+                        type="text"
+                        placeholder="알파벳 + 숫자 조합으로 입력해주세요"
+                        value={loginId}
+                        onChange={e => setLoginId(e.target.value)}
+                        style={{
+                            width: "100%",
+                            padding: "0.75rem",
+                            borderRadius: "8px",
+                            border: "1px solid #ccc",
+                            fontSize: "0.8rem",
+                        }}
+                    />
+                </div>
+                <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "350px"}}>
+                    <label style={{display: "block", textAlign: "right", width: "100px", marginRight: "20px"}}>비밀번호</label>
+                    <input
+                        type="password"
+                        placeholder="숫자 4자리로 입력해주세요"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        style={{
+                            width: "100%",
+                            padding: "0.75rem",
+                            borderRadius: "8px",
+                            border: "1px solid #ccc",
+                            fontSize: "0.8rem",
+                        }}
+                    />
+                </div>
             </div>
-            <div style={{ marginBottom: "1rem" }}>
-            <input
-                type="password"
-                placeholder="비밀번호를 입력하세요"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-            />
-            </div>
-            <button onClick={handleSignup}>가입하기</button>
-            {message && <p style={{ marginTop: "1rem", color: "red" }}>{message}</p>}
+            {message && <p style={{ marginTop: "0px", color: "red" }}>{message}</p>}
+            <button onClick={handleSignup}
+                    style={{
+                        fontSize: "0.9rem",
+                        color: "#444",
+                        backgroundColor: "rgb(247, 212, 201)",
+                        padding: "0.6rem 1.5rem",
+                        marginTop: "40px",
+                        border: "none",
+                        borderRadius: "20px",
+                        boxShadow: "0 4px 4px rgba(0,0,0,0.1)",
+                        transition: "all 0.2s ease-in-out",
+                        cursor: "pointer",
+                    }}>가입하기</button>
         </div>
     );
 }
+
+//rgb(237, 184, 177)
+//rgb(255, 220, 206);

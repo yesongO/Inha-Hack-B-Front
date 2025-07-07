@@ -19,7 +19,7 @@ export const categories = [
         title: "코딩",
         image: "/computer.png",
         badge: "코딩괴수",
-        link: "/category/python",
+        link: "/category/coding",
         description: "코딩, 질문은 많지만 진심 어린 답변은 적어요. 여기 버그부터 현업 고민까지 당신의 코드와 고민을 함께 들여다볼 사람이 있어요."
     },
     {

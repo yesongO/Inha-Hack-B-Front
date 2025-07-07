@@ -1,9 +1,12 @@
 import React from 'react';
+
 import { FiSearch } from 'react-icons/fi';
 import { AiFillBell } from 'react-icons/ai';
+
 import './Topbar.css';
 
 export default function Topbar() {
+
     return(
         <div className="topbar-container">
             <div className="topbar-left">

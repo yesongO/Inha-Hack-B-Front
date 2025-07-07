@@ -34,7 +34,7 @@ export default function MainPage() {
                 <button className="btn-2"><BsBookmarkFill size={20} color='#686D76'/>내 카테고리</button>
             </div>
             <div className="cat-list">
-                {categories.map((cat, idx) => (
+                {categories.slice(0, 2).map((cat, idx) => (
                     <Category 
                         key={idx}
                         title={cat.title}
