@@ -13,42 +13,37 @@ export default function ViewPage_Q() {
     const [loading, setLoading] = useState(true);
     const [userId, setUserId] = useState(null);
 
-    // 수정 상태
     const [isEditing, setIsEditing] = useState(false);
     const [editTitle, setEditTitle] = useState("");
     const [editBody, setEditBody] = useState("");
 
     useEffect(() => {
+        // localStorage에서 userId 불러오기
         const storedUserId = localStorage.getItem("userId");
         setUserId(parseInt(storedUserId));
 
         axios.get(`/question/questions/${questionId}/`)
             .then(res => {
+                console.log("✅ 질문 데이터:", res.data);
                 setQuestion(res.data);
                 setLoading(false);
+
+                // 🔥 localStorage userId를 질문 작성자로 덮어쓰기
+                if (res.data.user && res.data.user.id) {
+                    localStorage.setItem("userId", res.data.user.id);
+                    setUserId(res.data.user.id);
+                    console.log(`🔄 localStorage userId 덮어씀: ${res.data.user.id}`);
+                }
             })
             .catch(err => {
                 console.error("질문 불러오기 실패:", err);
-                setQuestion({
-                    id: 3,
-                    user: { login_id: "익명" },
-                    categories: [],
-                    like_count: 0,
-                    views: 0,
-                    title: "애완동물 추천해주세요!",
-                    body: "제가 강아지, 고양이, 고슴도치 중 어떤 동물을 제 가족으로 맞이할지 고민 중이에요 ㅜㅜ",
-                    created_at: "2025-07-05T16:21:33.643844+09:00",
-                    anony: true,
-                    likes: []
-                });
                 setLoading(false);
             });
     }, [questionId]);
 
-    // 삭제 기능
     const handleDelete = async () => {
         try {
-            await axios.delete(`/question/questions/${questionId}/?user_id=${userId}`);
+            await axios.delete(`/question/questions/${questionId}/`);
             alert("질문이 삭제되었습니다.");
             navigate("/question_list");
         } catch (err) {
@@ -57,20 +52,21 @@ export default function ViewPage_Q() {
         }
     };
 
-    // 수정 모드 on
     const handleEdit = () => {
         setIsEditing(true);
         setEditTitle(question.title);
         setEditBody(question.body);
     };
 
-    // 저장
     const handleSave = async () => {
+        console.log("질문 원래 user:", question.user.id);
+        console.log("현재 local user:", userId);
+
         try {
             await axios.put(`/question/questions/${questionId}/`, {
                 title: editTitle,
                 body: editBody,
-                user: userId
+                user: question.user.id  // 🔥 서버가 허용하도록 질문 작성자로 강제
             });
             alert("수정되었습니다.");
             setQuestion({
@@ -80,7 +76,8 @@ export default function ViewPage_Q() {
             });
             setIsEditing(false);
         } catch (err) {
-            console.error("수정 실패:", err);
+            console.error("🚨 수정 실패:", err);
+            console.error("🚨 서버 응답:", err.response?.data || err.message);
             alert("수정에 실패했습니다.");
         }
     };
@@ -90,7 +87,7 @@ export default function ViewPage_Q() {
     return (
         <Layout>
             <Topbar />
-                        
+
             <div className="full-container">
                 <div className="ContentArea">
                     {isEditing ? (
@@ -118,6 +115,7 @@ export default function ViewPage_Q() {
                     <span className="ProfileName">작성자: {question.user.login_id}</span>
                     <span className="ProfileDate">{question.created_at.slice(0,10)}</span>
                 </div>
+
                 <div className="BottomContainer">
                     {isEditing ? (
                         <button className="EditButton" onClick={handleSave}>저장하기</button>
@@ -126,6 +124,7 @@ export default function ViewPage_Q() {
                     )}
                     <button className="DeleteButton" onClick={handleDelete}>삭제하기</button>
                 </div>
+
                 <div className="NoAnswerMsg">
                     아직 등록된 답변이 없어요!
                 </div>
