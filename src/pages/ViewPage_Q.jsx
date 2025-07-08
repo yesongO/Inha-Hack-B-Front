@@ -17,17 +17,11 @@ export default function ViewPage_Q() {
     const [editTitle, setEditTitle] = useState("");
     const [editBody, setEditBody] = useState("");
 
+    const [error, setError] = useState(null);
+
     useEffect(() => {
-        // localStorage에서 userId, profileId 불러오기
         const storedUserId = localStorage.getItem("userId");
         setUserId(parseInt(storedUserId));
-
-        const profileId = localStorage.getItem("profileId");
-
-        if (!profileId) {
-            setError("프로필 ID가 존재하지 않아요.");
-            return;
-        }
 
         axios.get(`/question/questions/${questionId}/`)
             .then(res => {
@@ -35,7 +29,6 @@ export default function ViewPage_Q() {
                 setQuestion(res.data);
                 setLoading(false);
 
-                // 🔥 localStorage userId를 질문 작성자로 덮어쓰기
                 if (res.data.user && res.data.user.id) {
                     localStorage.setItem("userId", res.data.user.id);
                     setUserId(res.data.user.id);
@@ -44,6 +37,7 @@ export default function ViewPage_Q() {
             })
             .catch(err => {
                 console.error("질문 불러오기 실패:", err);
+                setError("질문을 불러오는데 실패했습니다.");
                 setLoading(false);
             });
     }, [questionId]);
@@ -73,7 +67,7 @@ export default function ViewPage_Q() {
             await axios.put(`/question/questions/${questionId}/`, {
                 title: editTitle,
                 body: editBody,
-                user: question.user.id  // 🔥 서버가 허용하도록 질문 작성자로 강제
+                user: question.user.id
             });
             alert("수정되었습니다.");
             setQuestion({
@@ -90,6 +84,12 @@ export default function ViewPage_Q() {
     };
 
     if (loading) return <div>로딩중...</div>;
+    if (error) return (
+        <Layout>
+            <Topbar />
+            <div style={{color: "red", padding: "20px"}}>에러: {error}</div>
+        </Layout>
+    );
 
     return (
         <Layout>
@@ -112,11 +112,14 @@ export default function ViewPage_Q() {
                         </>
                     ) : (
                         <>
-                            <h2 className="ContentTitle" style={{fontFamily: "omyu_pretty"}}>{question.title}</h2>
+                            <h2 className="ContentTitle" style={{fontFamily: "omyu_pretty"}}>
+                                {question.title}
+                            </h2>
                             <p className="ContentBody">{question.body}</p>
                         </>
                     )}
                 </div>
+
                 <div className="ProfileBox">
                     <div className="ProfileCircle"></div>
                     <span className="ProfileName">작성자: {question.user.login_id}</span>

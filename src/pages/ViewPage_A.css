@@ -1,0 +1,72 @@
+.QuestionBox {
+  background: #fff0f0;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 20px auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ContentTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ContentBody {
+  font-size: 16px;
+  line-height: 1.6;
+  word-break: break-word; /* ✅ 한 단어가 너무 길면 줄바꿈 */
+  white-space: normal;    /* ✅ 줄바꿈 제대로 처리 */
+}
+
+/* ✅ AnswerBox: 박스 없애고 글씨체만 적용 */
+.AnswerBox {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 20px 0;
+  max-width: 700px;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 20px;  /* 세로줄과 간격 */
+  margin: 30px 0;
+}
+
+/* 답변 작성자 */
+.AnswerBox .AnswerMeta {
+  font-family: 'InkLipquid', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* 답변 본문 */
+.AnswerBody {
+  
+  font-size: 1.2rem;
+  white-space: pre-line;  /* 줄바꿈 보존 */
+  text-indent: 1em;       /* 첫 줄 들여쓰기 */
+}
+
+/* 왼쪽 세로줄 */
+.AnswerBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background: #f9d5d3; /* 연핑크 계열로 */
+  border-radius: 2px;
+}
+
+/* 답변 사이 구분선(위쪽만) */
+.AnswerBox:not(:first-child) {
+  border-top: 1px dashed #ddd;
+  padding-top: 20px;
+}
