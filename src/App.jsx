@@ -9,6 +9,7 @@ import WritePage from './pages/WritePage';
 import ViewPage_Q from "./pages/ViewPage_Q";
 import InCategory from './pages/InCategory';
 import AnswerPage from './pages/AnswerPage';
+import ViewPage_A from "./pages/ViewPage_A";
 
 import './index.css';
 import { NotificationProvider } from './components/Notification';
@@ -30,6 +31,8 @@ function App() {
         <Route path="/viewpage-q/:questionId" element={<ViewPage_Q />} />
         <Route path="/category/:slug" element={<InCategory />} />
         <Route path="/answer/:questionId" element={<AnswerPage />} />
+        <Route path="/viewpage-a/:questionId" element={<ViewPage_A />} />
+       
       </Routes>
     </Router>
     </NotificationProvider>
