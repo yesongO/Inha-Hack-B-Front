@@ -122,3 +122,14 @@
     border-radius: 28px 28px 0 0;
 }
 
+.write {
+    font-size: 13px;
+    margin-top: 3px;
+    color: #444444;
+}
+
+.darkmode {
+    font-size: 13px;
+    margin-top: 3px;
+    color: #444444;
+}

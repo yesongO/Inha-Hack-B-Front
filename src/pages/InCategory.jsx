@@ -65,7 +65,7 @@ export default function InCategory() {
             <Topbar />
             <div className="full-container">
                 {matchedCategory && (
-                    <div style={{ marginBottom: "2rem" }}>
+                    <div style={{ marginBottom: "0rem" }}>
                         <CategoryCard
                             title={matchedCategory.title}
                             image={matchedCategory.image}
@@ -75,12 +75,10 @@ export default function InCategory() {
                     </div>
                 )}
 
-                {/* <h2 style={{ marginBottom: "1rem" }}>🗂️ {slug} 카테고리의 질문들</h2> */}
-
                 {questions.length === 0 ? (
                     <p>아직 등록된 질문이 없어요.</p>
                 ) : (
-                    <ul style={{ listStyle: "none", padding: 0, width: "100%" }}>
+                    <ul style={{ listStyle: "none", padding: 0, width: "100%",}}>
                         {questions.map(q => (
                             <li key={q.id} style={{
                                 borderBottom: "1px solid #ccc",
@@ -88,12 +86,13 @@ export default function InCategory() {
                                 display: "flex",
                                 justifyContent: "space-between",
                                 alignItems: "center",
+                                margin: "30px 0px",
                             }}>
                                 <div style={{ flex: 1 }}>
-                                    <div style={{ fontSize: "1.2rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
+                                    <div style={{ fontSize: "1.6rem", fontWeight: "bold", marginBottom: "0.9rem", fontFamily: "omyu_pretty"}}>
                                         {q.title}
                                     </div>
-                                    <div style={{ fontSize: "0.95rem", color: "#333" }}>
+                                    <div style={{ fontSize: "1.1rem", color: "#333", fontFamily: "omyu_pretty", marginBottom: "30px", marginRight: "60px"}}>
                                         {q.body}
                                     </div>
                                 </div>
@@ -102,11 +101,12 @@ export default function InCategory() {
                                     style={{
                                         marginLeft: "1rem",
                                         padding: "0.6rem 1rem",
-                                        backgroundColor: "#FFB6B9",
+                                        backgroundColor: "rgb(255, 201, 186)",
                                         border: "none",
-                                        borderRadius: "8px",
+                                        borderRadius: "24px",
                                         color: "white",
-                                        cursor: "pointer"
+                                        cursor: "pointer",
+                                        fontSize: "0.8rem",
                                     }}
                                 >
                                     진심을 담아 답변하기
@@ -115,19 +115,6 @@ export default function InCategory() {
                         ))}
                     </ul>
                 )}
-
-                {/* {questions.length === 0 ? (
-                    <p>아직 등록된 질문이 없어요.</p>
-                ) : (
-                    <ul>
-                        {questions.map(q => (
-                            <li key={q.id}>
-                                <strong>{q.title}</strong><br />
-                                <span>{q.body}</span>
-                            </li>
-                        ))}
-                    </ul>
-                )} */}
             </div>
         </Layout>
     );

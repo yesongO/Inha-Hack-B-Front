@@ -97,3 +97,116 @@ button:focus-visible {
   font-style: normal;
 }
 
+
+/* 🌙 다크모드 관련 */
+
+body.dark .coral-box {
+  background: none !important; /* 기존 그라데이션 제거 */
+  background-color: #272e3a !important;
+  color: #d8dbe2 !important; 
+}
+
+body.dark .left-border {
+  background-color: #202023;
+}
+
+body.dark .top-border {
+  background-color: #202023;
+}
+
+body.dark {
+  background-color: #202023;
+  color: #f1f1f1;
+  overflow: hidden;
+  position: relative;
+}
+
+body.dark .content {
+  background-color: #28292d;
+}
+
+body.dark .cat-title {
+  color: #f1f1f1;
+}
+
+body.dark .p-wrapper p {
+  color: #f1f1f1;
+}
+
+body.dark .topbar-search {
+  background-color: #323234;
+}
+
+/* 별 공통 스타일 */
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+  z-index: 1;
+  pointer-events: none; /* 클릭 방해 안 되게 */
+}
+
+/* 반짝이는 애니메이션 */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+body.dark .btn-1 {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #3f424d;
+  gap: 8px;
+  border-radius: 28px 28px 0px 28px;
+}
+
+body.dark .btn-2 {
+  display: flex;
+  align-items: center;
+  background-color: #a3a4ab;
+  gap: 8px;
+  border-radius: 10px 28px 28px 10px;
+}
+
+body.dark .side-write {
+  background-color: #bbbdc6;
+}
+
+body.dark .side-profile {
+  background-color: #bbbdc6;
+}
+
+body.dark .profile-page {
+  color: #bbbdc6;
+}
+
+body.dark .profile-page a:hover {
+  color: #f8f4f2;
+}
+
+body.dark .bell-icon {
+  color: #bbbdc6;
+}
+
+body.dark .bell-icon:hover {
+  color: #f8f4f2;
+}
+
+body.dark .write {
+  color: #b3b3b3;
+}
+
+body.dark .darkmode {
+  color: #b3b3b3;
+}

@@ -11,6 +11,33 @@ export default function ProfilePage() {
     const [profile, setProfile] = useState(null);
     const [error, setError] = useState("");
 
+    // 사용자의 뱃지 불러오기
+    const [badges, setBadges] = useState([]);
+
+    // ⚪️ 뱃지 생성하기
+    // axios.post("/api/badges/", {
+    //     name: "첫 진심",
+    //     description: "작은 용기, 첫 진심의 시작",
+    //     condition_description: "첫 질문 등록",
+    //     image_url: "https://jinsimin.p-e.kr/jinsim_badge.png",
+    //     category: ""
+    // })
+    // .then(res => {
+    //     console.log("뱃지 생성 성공:", res.data);
+    // })
+    // .catch(err => {
+    //     console.error("뱃지 생성 실패", err)
+    // });
+
+    // ⚪️ 뱃지 조회하기
+    // axios.get("/api/badges/")
+    // .then(res => {
+    //     console.log("뱃지 목록", res.data);
+    // })
+    // .catch(err => {
+    //     console.error(err);
+    // });
+
     // 뱃지 데이터 리스트
     const badgeList = [
         {name: "첫 진심", image: "/jinsim_badge.png", earned: true},
@@ -31,6 +58,7 @@ export default function ProfilePage() {
     // 프로필
     useEffect(() => {
         const profileId = localStorage.getItem("profileId");
+        const userId = localStorage.getItem("userId");
 
         if (!profileId) {
             setError("프로필 ID가 존재하지 않아요.");
@@ -45,6 +73,11 @@ export default function ProfilePage() {
             console.error("프로필 조회 실패", err);
             setError("프로필을 불러오지 못했습니다.");
         });
+
+        // 사용자의 뱃지 정보 불러오기
+        axios.get(`api/badges/user/${userId}`)
+        .then(res => setBadges(res.data))
+        .catch(err => console.error(err));
     }, []);
 
     if (!profile) {
@@ -77,7 +110,17 @@ export default function ProfilePage() {
             <div className="badge-section">
                 <h3>나의 뱃지</h3>
                 <div className="badge-grid">
-                    {badgeList.map((badge, idx) => (
+                    {badges.length > 0 ? (
+                        badges.map((badgeWrapper, idx) => (
+                        <div key={idx} className="badge-item">
+                            <img src={"/jinsim_badge.png"} alt={badgeWrapper.badge.name} className="badge-img" />
+                            <p className="badge-name">{badgeWrapper.badge.name}</p>
+                        </div>
+                        ))
+                    ) : (
+                        <p>획득한 뱃지가 아직 없어요 😢</p>
+                    )}
+                    {/* {badgeList.map((badge, idx) => (
                     <div key={idx} className="badge-item">
                         {badge.earned ? (
                         <img src={badge.image} alt={badge.name} className="badge-img" />
@@ -88,7 +131,7 @@ export default function ProfilePage() {
                         {badge.earned ? badge.name : ""}
                         </p>
                     </div>
-                    ))}
+                    ))} */}
                 </div>
             </div>
 

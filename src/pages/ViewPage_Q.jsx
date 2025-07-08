@@ -18,9 +18,16 @@ export default function ViewPage_Q() {
     const [editBody, setEditBody] = useState("");
 
     useEffect(() => {
-        // localStorage에서 userId 불러오기
+        // localStorage에서 userId, profileId 불러오기
         const storedUserId = localStorage.getItem("userId");
         setUserId(parseInt(storedUserId));
+
+        const profileId = localStorage.getItem("profileId");
+
+        if (!profileId) {
+            setError("프로필 ID가 존재하지 않아요.");
+            return;
+        }
 
         axios.get(`/question/questions/${questionId}/`)
             .then(res => {
@@ -105,7 +112,7 @@ export default function ViewPage_Q() {
                         </>
                     ) : (
                         <>
-                            <h2 className="ContentTitle">{question.title}</h2>
+                            <h2 className="ContentTitle" style={{fontFamily: "omyu_pretty"}}>{question.title}</h2>
                             <p className="ContentBody">{question.body}</p>
                         </>
                     )}

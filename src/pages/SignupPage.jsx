@@ -10,6 +10,11 @@ export default function SignupPage() {
     const navigate = useNavigate();
 
     const handleSignup = () => {
+        if (!loginId.trim() || !password.trim()) {
+            setMessage("아이디와 비밀번호를 모두 입력해주세요 :)");
+            return;
+        }
+        
         const data = {
             login_id: loginId,
             password: password,

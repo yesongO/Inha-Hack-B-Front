@@ -3,9 +3,11 @@ import axios from "axios";
 import '../pages/WritePage.css';
 import Layout from '../components/Layout';
 import { useNavigate } from "react-router-dom";
+import { useNotification } from "../components/Notification";
 
 export default function WritePage() {
     const navigate = useNavigate();
+    const { showNotification } = useNotification();
 
     const [nickname, setNickname] = useState("누군가");
     const [userId, setUserId] = useState(null);
@@ -49,7 +51,7 @@ export default function WritePage() {
         );
     };
 
-    // ✅ 질문 등록
+    // ✅ 질문 등록 , // (첫 뱃지 지급)
     const handleSubmit = async () => {
         console.log("선택된 categories (types):", selectedCategories.map(v => typeof v));
 
@@ -73,6 +75,15 @@ export default function WritePage() {
             const newId = res.data.id;
             console.log("등록된 questionId:", newId);
 
+            // 첫 글 뱃지 지급!
+            try {
+                await axios.post(`/api/badges/award/${userId}/`, { badge: 1 });
+                console.log("첫 질문 뱃지 지급 성공!")
+            } catch (badgeErr) {
+                console.warn("뱃지 지급 실패 (이미 받았니?)", badgeErr);
+            }
+            showNotification("첫 뱃지를 획득했어요! 프로필페이지에서 확인해보세요!")
+
             alert('질문이 등록되었습니다!');
             setTitle("");
             setContent("");
@@ -92,12 +103,14 @@ export default function WritePage() {
             <div className="full-container">
                 <div className="PageContainer">
                     <div className="top">
-                        <p className="TopMessage">
-                            무엇이든 괜찮아요. 누군가는 당신의 고민에 진심으로 답할 거예요.
-                        </p>
+                        <div>
+                            <p className="TopMessage">
+                                무엇이든 괜찮아요. 누군가는 당신의 고민에 진심으로 답할 거예요.
+                            </p>
+                        </div>
                         <div className="ProfileBox">
                             <div className="ProfileCircle"></div>
-                            <span className="ProfileName">{nickname}</span>
+                            <span className="ProfileName" style={{fontSize: "1.4rem"}}>{nickname}</span>
                         </div>
                     </div>
 
@@ -120,6 +133,7 @@ export default function WritePage() {
                                     categories.map((cat) => (
                                         <button
                                             key={cat.id}
+                                            style={{marginBottom: "6px"}}
                                             className={`CategoryButton ${selectedCategories.includes(parseInt(cat.id)) ? "selected" : ""}`}
                                             onClick={() => handleCategoryClick(cat.id)}
                                         >
@@ -129,8 +143,8 @@ export default function WritePage() {
                                 ) : (
                                     <span>카테고리가 없습니다.</span>
                                 )}
-                                <span className="CategoryNotice">
-                                    카테고리를 한 개 이상 선택해 주세요.
+                                <span className="CategoryNotice"><br />
+                                    (카테고리를 한 개 이상 선택해 주세요.)
                                 </span>
                             </div>
                         </div>

@@ -8,6 +8,47 @@ import { FiMenu } from 'react-icons/fi';
 //-- 모든 페이지에서 넣어 줄 테두리 레이아웃
 
 export default function Layout({ children }) {
+
+    //-- 🌙 다크 모드 관련 ------------------------
+    const [isDark, setIsDark] = useState(false);
+
+    const toggleDark = () => {
+        setIsDark(prev => !prev);
+        if (!isDark) {
+            document.body.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark");
+        }
+    };
+
+    useEffect(() => {
+    if (isDark) {
+        const numStars = 80;
+        const colors = ['white','#ffc',];
+
+        for (let i = 0; i < numStars; i++) {
+            const size = Math.random() * 1 + 0.9;
+            const star = document.createElement("span");
+            star.className = "star";
+            star.style.position = "fixed";
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.background = colors[Math.floor(Math.random() * colors.length)];
+            star.style.borderRadius = "50%";
+            star.style.opacity = "0.8";
+            star.style.animation = "twinkle 2s infinite ease-in-out";
+            star.style.animationDuration = `${Math.random() * 4 + 3}s`; // 1s ~ 3s
+            star.style.zIndex = "1";
+            document.body.appendChild(star);
+        }
+        } else {
+        document.querySelectorAll(".star").forEach(el => el.remove());
+        }
+    }, [isDark]);
+    //-- 🌙 다크 모드 관련 ------------------------
+
     const navigate = useNavigate();
 
     const [hamOpen, setHamOpen] = useState(false);
@@ -46,11 +87,11 @@ export default function Layout({ children }) {
                         style={{display: "flex", justifyContent: "center", alignItems: "center",}}>
                     <img src="/pen.png" style={{width: "20px"}}/>
                 </button>
-                <p style={{fontSize:'13px', marginTop:'3px', color:'#444444'}}>글쓰기</p>
-                <button className='side-profile' style={{display: "flex", justifyContent: "center", alignItems: "center",}}>
+                <p className='write'>글쓰기</p>
+                <button className='side-profile' onClick={toggleDark} style={{display: "flex", justifyContent: "center", alignItems: "center",}}>
                     <img src="/moon.png" style={{width: "20px"}}/>
                 </button>
-                <p style={{fontSize: '13px', marginTop:'3px', color:'#444444'}}>다크모드</p>
+                <p className='darkmode'>다크모드</p>
             </div>
 
             <div ref={hamRef} className={`side-menu ${hamOpen ? 'open' : ''}`}>

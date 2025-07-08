@@ -10,10 +10,14 @@ import ViewPage_Q from "./pages/ViewPage_Q";
 import InCategory from './pages/InCategory';
 import AnswerPage from './pages/AnswerPage';
 
+import './index.css';
+import { NotificationProvider } from './components/Notification';
+
 
 function App() {
 
   return (
+    <NotificationProvider>
     <Router>
       <Routes>
         <Route path="/" element={<TitlePage />} />
@@ -26,9 +30,9 @@ function App() {
         <Route path="/viewpage-q/:questionId" element={<ViewPage_Q />} />
         <Route path="/category/:slug" element={<InCategory />} />
         <Route path="/answer/:questionId" element={<AnswerPage />} />
-
       </Routes>
     </Router>
+    </NotificationProvider>
   )
 }
 
