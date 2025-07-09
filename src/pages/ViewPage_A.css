@@ -1,6 +1,6 @@
 .QuestionBox {
   background: #fff5f0;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 12px;
   max-width: 700px;
   margin-top: 20px;
@@ -12,13 +12,14 @@
 }
 
 .ContentTitle {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: 'omyu_pretty';
 }
 
 .ContentBody {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   word-break: break-word; /* ✅ 한 단어가 너무 길면 줄바꿈 */
   white-space: normal;    /* ✅ 줄바꿈 제대로 처리 */
@@ -42,15 +43,16 @@
 /* 답변 작성자 */
 .AnswerBox .AnswerMeta {
   font-family: 'InkLipquid', cursive;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 12px;
   display: block;
+  margin-bottom: -8px;
 }
 
 /* 답변 본문 */
 .AnswerBody {
-  
+  font-family: 'omyu_pretty';
   font-size: 1.2rem;
   white-space: pre-line;  /* 줄바꿈 보존 */
   text-indent: 1em;       /* 첫 줄 들여쓰기 */

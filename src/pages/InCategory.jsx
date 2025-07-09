@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import './InCategory.css';
+
 import Layout from "../components/Layout";
 import Topbar from "../components/Topbar";
 
@@ -92,7 +94,7 @@ export default function InCategory() {
                                     <div style={{ fontSize: "1.6rem", fontWeight: "bold", marginBottom: "0.9rem", fontFamily: "omyu_pretty"}}>
                                         {q.title}
                                     </div>
-                                    <div style={{ fontSize: "1.1rem", color: "#333", fontFamily: "omyu_pretty", marginBottom: "30px", marginRight: "60px"}}>
+                                    <div className="line-clamp" style={{ fontSize: "1.1rem", color: "#333", fontFamily: "omyu_pretty", marginBottom: "30px", marginRight: "60px"}}>
                                         {q.body}
                                     </div>
                                 </div>

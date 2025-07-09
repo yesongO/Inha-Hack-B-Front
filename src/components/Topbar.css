@@ -86,17 +86,17 @@
     }
     @keyframes glow {
         from {
-            color: #ff77aa;
+            color: #ff9e77;
             text-shadow:
-                0 0 8px #ff77aa,
-                0 0 16px #e79eff,
+                0 0 8px #ffd877,
+                0 0 16px #ffffff,
                 0 0 24px #fff;
             }
             to {
-            color: #ffc4ec;
+            color: #ffc4c4;
             text-shadow:
-                0 0 10px #ffc4ec,
-                0 0 20px #ddaaff,
+                0 0 10px #ffc4c4,
+                0 0 20px #eef6c5,
                 0 0 30px #ffffff;
             }
 }

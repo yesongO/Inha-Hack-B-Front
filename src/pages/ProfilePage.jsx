@@ -159,23 +159,23 @@ export default function ProfilePage() {
                     <p>제작한 포트폴리오가 아직 없어요 😪</p>
             </div>
 
-           <div className="my-questions-section">
-           <h3>나의 작성 질문</h3>
-           {myQuestions.length === 0 ? (
-           <p>아직 작성한 질문이 없어요 🥲</p>
-             ) : (
-        <div className="question-list">
-            {myQuestions.map(q => (
-                <div key={q.id} className="question-card">
-                    <a href={`/viewpage-a/${q.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <h2 className="question-title">{q.title}</h2>
-                        <p className="question-body">{q.body}</p>
-                    </a>
+            <div className="my-questions-section">
+            <h3>나의 작성 질문</h3>
+            {myQuestions.length === 0 ? (
+            <p>아직 작성한 질문이 없어요 🥲</p>
+                ) : (
+                <div className="question-list">
+                    {myQuestions.map(q => (
+                        <div key={q.id} className="question-card">
+                            <a href={`/viewpage-a/${q.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <h2 className="question-title">{q.title}</h2>
+                                <p className="question-body">{q.body}</p>
+                            </a>
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </div>
-    )}
-</div>
+            )}
+            </div>
 
 
             {/* //---------------------------------------------- */}
