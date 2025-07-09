@@ -10,6 +10,8 @@ export default function ProfilePage() {
 
     const [profile, setProfile] = useState(null);
     const [error, setError] = useState("");
+    //사용자 쓴 글
+    const [myQuestions, setMyQuestions] = useState([]);
 
     // 사용자의 뱃지 불러오기
     const [badges, setBadges] = useState([]);
@@ -79,6 +81,20 @@ export default function ProfilePage() {
         .then(res => setBadges(res.data))
         .catch(err => console.error(err));
     }, []);
+    
+    useEffect(() => {
+    const userId = localStorage.getItem("userId");
+    axios.get('/question/questions/search/', {
+        params: {
+            categories: "",
+            keyword: "",
+            date: "",
+            user: userId
+        }
+    })
+    .then(res => setMyQuestions(res.data))
+    .catch(err => console.error("내 질문 불러오기 실패:", err));
+}, []);
 
 
     if (!profile) {
@@ -143,10 +159,23 @@ export default function ProfilePage() {
                     <p>제작한 포트폴리오가 아직 없어요 😪</p>
             </div>
 
-            {/* // 내가 작성한 질문 부분 */}
-            <div>
-                
-            </div>
+           <div className="my-questions-section">
+           <h3>나의 작성 질문</h3>
+           {myQuestions.length === 0 ? (
+           <p>아직 작성한 질문이 없어요 🥲</p>
+             ) : (
+        <div className="question-list">
+            {myQuestions.map(q => (
+                <div key={q.id} className="question-card">
+                    <a href={`/viewpage-a/${q.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <h2 className="question-title">{q.title}</h2>
+                        <p className="question-body">{q.body}</p>
+                    </a>
+                </div>
+            ))}
+        </div>
+    )}
+</div>
 
 
             {/* //---------------------------------------------- */}
