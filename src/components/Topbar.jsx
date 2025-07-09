@@ -21,7 +21,7 @@ export default function Topbar() {
         setNewNotification(false);
     };
 
-     const handleSearch = () => { 
+    const handleSearch = () => { 
         if (keyword.trim() !== "") {
             navigate(`/search?keyword=${encodeURIComponent(keyword)}`);
         }
@@ -41,12 +41,12 @@ export default function Topbar() {
             <input 
                 type="text"
                 className="topbar-search"
-                placeholder='궁금한 점을 입력해보세요!'
+                placeholder='누군가의 진심을 찾아보아요'
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
                 onKeyDown={(e) => {
                 if (e.key === 'Enter') handleSearch();
-              }}
+            }}
             />
             <div className="topbar-right">
                 <a className="profile-page" href="/profile" style={{fontFamily:'sana-serif', fontSize:' 13px'}}>나의페이지</a>

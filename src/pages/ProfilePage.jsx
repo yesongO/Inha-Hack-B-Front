@@ -123,20 +123,25 @@ export default function ProfilePage() {
                     <p className="bio">" {profile.bio} "</p>
                 </div>
             </div>
+            <hr style={{border: "0.9px solid rgb(255, 225, 220)"}}/>
 
             {/* // 뱃지 부분 */}
             <div className="badge-section">
-                <h3>나의 뱃지</h3>
+                <h3>: 진심이 담겨 있는 뱃지</h3>
                 <div className="badge-grid">
                     {badges.length > 0 ? (
                         badges.map((badgeWrapper, idx) => (
-                        <div key={idx} className="badge-item">
-                            <img src={"/jinsim_badge.png"} alt={badgeWrapper.badge.name} className="badge-img" />
+                        <div key={idx} className="badge-item b-tooltip-wrapper">
+                            <img 
+                                src={"/jinsim_badge.png"} 
+                                alt={badgeWrapper.badge.name} 
+                                className="badge-img" />
                             <p className="badge-name">{badgeWrapper.badge.name}</p>
+                            <div className="b-tooltip">{badgeWrapper.badge.description}</div>
                         </div>
                         ))
                     ) : (
-                        <p>획득한 뱃지가 아직 없어요 😢</p>
+                        <p>획득한 뱃지가 아직 없어요.</p>
                     )}
                     {/* {badgeList.map((badge, idx) => (
                     <div key={idx} className="badge-item">
@@ -152,15 +157,18 @@ export default function ProfilePage() {
                     ))} */}
                 </div>
             </div>
+            <hr style={{border: "0.9px solid rgb(255, 225, 220)"}}/>
 
             {/* // 포트폴리오 부분 */}
             <div className="port-section">
-                <h3>나의 포트폴리오</h3>
-                    <p>제작한 포트폴리오가 아직 없어요 😪</p>
+                <h3>: 진심이 담겨 있는 포트폴리오</h3>
+                    <p>제작한 포트폴리오가 아직 없어요.</p>
             </div>
+            <hr style={{border: "0.9px solid rgb(255, 225, 220)"}}/>
 
             <div className="my-questions-section">
-            <h3>나의 작성 질문</h3>
+            <h3>✍🏼 내가 작성한 질문</h3>
+            <br />
             {myQuestions.length === 0 ? (
             <p>아직 작성한 질문이 없어요 🥲</p>
                 ) : (
@@ -169,7 +177,7 @@ export default function ProfilePage() {
                         <div key={q.id} className="question-card">
                             <a href={`/viewpage-a/${q.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <h2 className="question-title">{q.title}</h2>
-                                <p className="question-body">{q.body}</p>
+                                <p className="question-body line-clamp">{q.body}</p>
                             </a>
                         </div>
                     ))}

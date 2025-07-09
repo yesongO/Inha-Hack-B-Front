@@ -14,7 +14,7 @@
     font-size: 40px;
 }
 
-   
+
 
 
 
@@ -44,7 +44,7 @@
 .search-results .question-card p {
     color: #555;
     line-height: 1.5;
-     position: relative;
+    position: relative;
     padding-left: 18px;
 }
 
@@ -52,7 +52,7 @@
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
-    color: #f07c82;
+    color: #f0847c;
     font-weight: bold;
 }
 
@@ -76,6 +76,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: #f07c82;
+    color: #f0847c;
     font-size: 12px;
 }

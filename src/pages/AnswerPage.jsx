@@ -98,7 +98,7 @@ export default function AnswerPage() {
                     onChange={(e) => setAnswerText(e.target.value)}
                     placeholder="답변을 입력하세요"
                 />
-                <div className="ButtonRow">
+                <div className="ButtonRow" style={{marginRight: "-50px"}}>
                     <button className="SubmitButton" onClick={handleSubmit}>
                     답변 등록
                     </button>

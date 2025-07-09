@@ -31,7 +31,7 @@
   font-family: 'InkLipquid';
   font-size: 2.2rem;
   width: 701px;
-  margin: 0;
+  margin: 30px 10px 5px;
   text-align: left; /* ✅ 밑에 박스 시작점과 맞추기 위해 왼쪽 정렬 */
 }
 
@@ -43,15 +43,17 @@
   height: 500px;
   display: flex;
   flex-direction: column;
+  padding-right: 50px;
   margin: 0 0 30px 0;
 }
 
 .AnswerTextarea {
   width: 100%;
-  height: 150px;
+  height: 130px;
   border: none;
   outline: none;
   background: transparent;
+  padding: 25px;
   font-size: 1rem;
   resize: none;
   flex: 1;

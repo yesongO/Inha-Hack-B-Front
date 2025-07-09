@@ -54,6 +54,16 @@
     transition: all 0.2s ease;
 }
 
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* 줄 간격 */
+}
+
+.nav-links a {
+    display: block;
+}
+
 .side-logo {
     font-family: 'InkLipquid', sans-serif;
     font-size: 2.4rem;

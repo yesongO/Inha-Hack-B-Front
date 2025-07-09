@@ -135,7 +135,7 @@
 }
 
 .question-title {
-  font-family: 'omyu_pretty';
+    font-family: 'omyu_pretty';
 }
 
 .question-card + .question-card {
@@ -143,3 +143,37 @@
     
 }
 
+.b-tooltip-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.b-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    max-width: 220px;
+    background-color: #feece8;
+    color: #444;
+    text-align: center;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 90%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    font-family: 'omyu_pretty';
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.b-tooltip-wrapper:hover .b-tooltip {
+    visibility: visible;
+    opacity: 1;
+}

@@ -25,9 +25,25 @@ export default function MainPage() {
         <Layout>
             <Topbar />
             <div className="coral-box">
-                <p style={{fontSize: '3rem', marginTop: '0px'}}>사람이 건네는 답, 진심인</p>
+                <p style={{fontSize: '3rem', marginTop: '0px'}}>사람이 건네는 답, 진심인
+                    <img src="/realmoon.png" alt="달" className="dark-only-icon" />
+                </p>
+                
+                <div className="firefly-container">
+                    <div className="firefly-dot dot1"></div>
+                    <div className="firefly-dot dot2"></div>
+                    <div className="firefly-dot dot3"></div>
+                    <div className="firefly-dot dot4"></div>
+                    <div className="firefly-dot dot5"></div>
+                </div>
                 <p style={{color: 'white', fontSize: '1.7rem', margin: 0}}>안녕하세요, {nickname}님.</p>
                 <p style={{color: 'white', fontSize: '2.2rem', margin: 0}}>지금 당신의 마음을 톡-- 두드린 궁금증은?</p>
+
+                <img
+                    src="/nami.png"
+                    alt="나미야 잡화점"
+                    className="dark-mode-bottom-right"
+                />
             </div>
             <div className="btn-container">
                 <button className="btn-1"><AiFillStar size={20} color='white'/>실시간 인기 카테고리</button>

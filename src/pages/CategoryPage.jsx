@@ -45,7 +45,7 @@ export default function CategoryPage() {
     return (
         <Layout>
             <Topbar />
-            <p>카테고리페이지입니다.</p>
+            <br />
 
             {/* //-- 카테고리 등록하는 버튼 */}
             {/* <button onClick={handleCategorySeed} style={{

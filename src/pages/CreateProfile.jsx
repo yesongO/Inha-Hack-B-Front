@@ -76,7 +76,7 @@ export default function CreateProfile() {
                 <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>직업</label>
                 <input
                     type="text"
-                    placeholder="예: 프론트엔드 개발자"
+                    placeholder="예: 대학생, 웹개발자"
                     value={job}
                     onChange={e => setJob(e.target.value)}
                     style={{

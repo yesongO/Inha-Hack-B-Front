@@ -78,11 +78,11 @@ export default function WritePage() {
             // 첫 글 뱃지 지급!
             try {
                 await axios.post(`/api/badges/award/${userId}/`, { badge: 1 });
-                console.log("첫 질문 뱃지 지급 성공!")
+                console.log("첫 질문 뱃지 지급 성공!");
+                showNotification("🥰 첫 뱃지를 획득했어요! 나의페이지에서 확인해보세요.");
             } catch (badgeErr) {
                 console.warn("뱃지 지급 실패 (이미 받았니?)", badgeErr);
             }
-            showNotification("🥰 첫 뱃지를 획득했어요! 나의페이지에서 확인해보세요.");
 
             alert('질문이 등록되었습니다!');
             setTitle("");
@@ -154,7 +154,8 @@ export default function WritePage() {
                             <textarea 
                                 className="ContentArea" 
                                 value={content} 
-                                onChange={(e) => setContent(e.target.value)} 
+                                onChange={(e) => setContent(e.target.value)}
+                                style={{height: "200px"}} 
                             />
                         </div>
                     </div>
@@ -169,7 +170,7 @@ export default function WritePage() {
                             />
                             <span>익명체크</span>
                         </div>
-                        <button className="SubmitButton" onClick={handleSubmit}>
+                        <button className="SubmitButton" onClick={handleSubmit} style={{fontSize: "0.9rem"}}>
                             등록하기
                         </button>
                     </div>

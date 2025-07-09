@@ -98,12 +98,14 @@ button:focus-visible {
 }
 
 
+/* -------------------------------------------------
 /* 🌙 다크모드 관련 */
 
 body.dark .coral-box {
   background: none !important; /* 기존 그라데이션 제거 */
   background-color: #272e3a !important;
   color: #d8dbe2 !important; 
+  position: relative;
 }
 
 body.dark .left-border {
@@ -140,8 +142,8 @@ body.dark .topbar-search {
 /* 별 공통 스타일 */
 .star {
   position: fixed;
-  width: 2px;
-  height: 2px;
+  width: 1px;
+  height: 1px;
   background: white;
   border-radius: 50%;
   opacity: 0.8;
@@ -209,4 +211,175 @@ body.dark .write {
 
 body.dark .darkmode {
   color: #b3b3b3;
+}
+
+.dark-only-icon {
+  display: none;
+  width: 80px;
+  height: auto;
+  margin-left: 30px;
+}
+
+/* 다크모드일 때만 보이게 */
+body.dark .dark-only-icon {
+  display: inline-block;
+}
+
+.firefly-dot {
+  display: none;
+}
+
+body.dark .firefly-dot {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  /* background: #97d4a6; */
+  background: radial-gradient(circle, #97d4a6 40%, rgba(151, 212, 166, 0.2) 80%, transparent 100%);
+
+  box-shadow: 0 0 20px rgba(151, 212, 166, 0.9);
+  animation: floatFirefly 6s infinite ease-in-out, glowPulse 1.5s infinite alternate;
+}
+
+body.dark .firefly {
+  display: block;
+}
+
+@keyframes floatFirefly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-15px, -10px) rotate(10deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(-5deg);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 150, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 200, 1));
+  }
+}
+
+body.dark .firefly-dot {
+  display: block;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #97d4a6 40%, rgba(151, 212, 166, 0.2) 80%, transparent 100%);
+  box-shadow: 0 0 20px rgba(151, 212, 166, 0.6);
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+body.dark .dot1 {
+  top: 16%;
+  left: 8%;
+  animation: float1 6s infinite ease-in-out, glowPulse 1.5s infinite alternate;
+}
+body.dark .dot2 {
+  top: 30%;
+  left: 60%;
+  animation: float2 8s infinite ease-in-out, glowPulse 1.8s infinite alternate;
+}
+body.dark .dot3 {
+  top: 38%;
+  left: 75%;
+  animation: float3 7s infinite ease-in-out, glowPulse 2s infinite alternate;
+}
+body.dark .dot4 {
+  top: 55%;
+  left: 38%;
+  animation: float4 9s infinite ease-in-out, glowPulse 1.2s infinite alternate;
+}
+body.dark .dot5 {
+  top: 20%;
+  left: 84%;
+  animation: float5 5s infinite ease-in-out, glowPulse 1.5s infinite alternate;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-10px, -15px) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(-5deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -10px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-15px, 10px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float4 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(10px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float5 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-5px, 15px); }
+  100% { transform: translate(0, 0); }
+}
+
+.dark-mode-bottom-right {
+  display: none;
+  position: absolute;
+  width: 180px; /* 원하는 크기 */
+  height: auto;
+  bottom: 0;
+  right: 0;
+  z-index: 10; /* 위로 올라오도록 */
+}
+
+body.dark .dark-mode-bottom-right {
+  display: block;
+}
+
+body.dark .side-menu {
+  background-color: #393942;
+  border: 0px solid #F2DFDF;
+}
+
+body.dark .side-logo {
+  color: #feffe9;
+}
+
+/* 다크모드일 때 스타일 */
+body.dark a {
+  color: #d5f0e2; /* 예쁘고 부드러운 연한 초록빛 */
+}
+
+body.dark .nav-links a {
+  color: #c3c3c3;
+}
+
+/* 호버 시 색상 */
+body.dark .side-page a:hover {
+  color: #e6d598;
+}
+
+body.dark .alert-box {
+  background-color: #7f7f7f;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+} 
+
+/* 말풍선 꼬리 - 둥글고 부드러운 느낌 */
+body.dark .alert-box::before {
+  background-color: #7f7f7f;
+  box-shadow: -1px -1px 0 0 #fff;  /* 테두리 색 맞춰줌 */
 }
