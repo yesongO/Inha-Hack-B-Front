@@ -44,16 +44,16 @@ export default function ProfilePage() {
     ]
 
     // 조회용
-    const handleGetUsers = () => {
-        axios.get('/main/users/')
-        .then(res => {
-            console.log("유저 목록 조회 성공:", res.data);
-            setUsers(res.data);
-        })
-        .catch(err => {
-            console.error("유저 조회 실패:", err);
-        });
-    };
+    // const handleGetUsers = () => {
+    //     axios.get('/main/users/')
+    //     .then(res => {
+    //         console.log("유저 목록 조회 성공:", res.data);
+    //         setUsers(res.data);
+    //     })
+    //     .catch(err => {
+    //         console.error("유저 조회 실패:", err);
+    //     });
+    // };
 
     // 프로필
     useEffect(() => {
@@ -79,6 +79,7 @@ export default function ProfilePage() {
         .then(res => setBadges(res.data))
         .catch(err => console.error(err));
     }, []);
+
 
     if (!profile) {
         return (
@@ -106,6 +107,7 @@ export default function ProfilePage() {
                     <p className="bio">" {profile.bio} "</p>
                 </div>
             </div>
+
             {/* // 뱃지 부분 */}
             <div className="badge-section">
                 <h3>나의 뱃지</h3>
@@ -135,9 +137,20 @@ export default function ProfilePage() {
                 </div>
             </div>
 
+            {/* // 포트폴리오 부분 */}
+            <div className="port-section">
+                <h3>나의 포트폴리오</h3>
+                    <p>제작한 포트폴리오가 아직 없어요 😪</p>
+            </div>
+
+            {/* // 내가 작성한 질문 부분 */}
+            <div>
+                
+            </div>
+
 
             {/* //---------------------------------------------- */}
-            <p>api 테스트</p>
+            {/* <p>api 테스트</p>
             <button onClick={handleGetUsers} style={{ marginLeft: '1rem' }}>📋 유저 전체 조회</button>
             <p>{message}</p>
             <div style={{ marginTop: '2rem' }}>
@@ -153,7 +166,7 @@ export default function ProfilePage() {
                 ))}
                 </ul>
             )}
-            </div>
+            </div> */}
             {/* // ------------------------------------------------ */}
         </Layout>
     );

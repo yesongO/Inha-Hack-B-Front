@@ -14,7 +14,7 @@ export default function SignupPage() {
             setMessage("아이디와 비밀번호를 모두 입력해주세요 :)");
             return;
         }
-        
+
         const data = {
             login_id: loginId,
             password: password,
@@ -45,7 +45,7 @@ export default function SignupPage() {
                     <label style={{display: "block", textAlign: "right", width: "100px", marginRight: "20px"}}>아이디</label>
                     <input
                         type="text"
-                        placeholder="알파벳 + 숫자 조합으로 입력해주세요"
+                        placeholder="진심인에서 사용할 아이디를 입력해주세요."
                         value={loginId}
                         onChange={e => setLoginId(e.target.value)}
                         style={{
@@ -61,7 +61,7 @@ export default function SignupPage() {
                     <label style={{display: "block", textAlign: "right", width: "100px", marginRight: "20px"}}>비밀번호</label>
                     <input
                         type="password"
-                        placeholder="숫자 4자리로 입력해주세요"
+                        placeholder="숫자 8자리로 입력해주세요"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         style={{

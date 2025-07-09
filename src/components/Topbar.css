@@ -55,13 +55,48 @@
 
 .alert-box {
     position: absolute;
-    top: 20px;      /* 종 아이콘 바로 아래쯤 */
-    right: 20px;    /* 오른쪽 끝에서 조금 떨어지게 */
-    background-color: #beb9a5;
-    border: 1px solid #ffcc80;
-    border-radius: 12px;
+    top: 45px;      /* 종 아이콘 바로 아래쯤 */
+    right: 2px;    /* 오른쪽 끝에서 조금 떨어지게 */
+    background-color: #eec5bf;
+    border: 1px solid #ffffff;
+    border-radius: 16px;
     padding: 10px 16px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
     white-space: nowrap;
+    font-size: 12px;
 } 
+
+/* 말풍선 꼬리 - 둥글고 부드러운 느낌 */
+.alert-box::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 26px; /* 종 위치 맞춰 조절 */
+    width: 12px;
+    height: 12px;
+    background-color: #eec5bf;
+    transform: rotate(45deg);
+    border-radius: 2px;  /* 👈 살짝 둥글게 */
+    box-shadow: -1px -1px 0 0 #fff;  /* 테두리 색 맞춰줌 */
+}
+
+.bell-icon.glow {
+    animation: glow 1.2s infinite alternate;
+    }
+    @keyframes glow {
+        from {
+            color: #ff77aa;
+            text-shadow:
+                0 0 8px #ff77aa,
+                0 0 16px #e79eff,
+                0 0 24px #fff;
+            }
+            to {
+            color: #ffc4ec;
+            text-shadow:
+                0 0 10px #ffc4ec,
+                0 0 20px #ddaaff,
+                0 0 30px #ffffff;
+            }
+}

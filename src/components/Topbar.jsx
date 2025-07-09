@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { AiFillBell } from 'react-icons/ai';
 
@@ -8,10 +9,18 @@ import { useNotification } from './Notification';
 export default function Topbar() {
     const { message } = useNotification();
     const [showAlertBox, setShowAlertBox] = useState(false);
+    const [newNotification, setNewNotification] = useState(false);
 
     const handleBellClick = () => {
         setShowAlertBox(prev => !prev);
+        setNewNotification(false);
     };
+
+    useEffect(() => {
+        if (message) {
+            setNewNotification(true);
+        }
+    }, [message]);
 
     return(
         <div className="topbar-container">
@@ -25,7 +34,9 @@ export default function Topbar() {
             />
             <div className="topbar-right">
                 <a className="profile-page" href="/profile" style={{fontFamily:'sana-serif', fontSize:' 13px'}}>나의페이지</a>
-                <AiFillBell className="bell-icon" size={30} onClick={handleBellClick} />
+                <AiFillBell 
+                className={`bell-icon ${newNotification ? "glow" : ""}`}
+                size={30} onClick={handleBellClick} />
             </div>
 
             {showAlertBox && (

@@ -1,11 +1,14 @@
 .QuestionBox {
-  background: #fff0f0;
-  padding: 20px;
+  background: #fff5f0;
+  padding: 10px 20px;
   border-radius: 12px;
   max-width: 700px;
-  margin: 20px auto;
+  margin-top: 20px;
+  margin-bottom: 0;
   width: 100%;
   box-sizing: border-box;
+  font-family: 'omyu_pretty';
+  font-size: 1.3rem;
 }
 
 .ContentTitle {

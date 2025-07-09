@@ -53,12 +53,12 @@ export default function CreateProfile() {
             <h2 style={{ fontFamily: "InkLipquid", fontSize: "2.5rem", marginBottom: "2rem"}}>
                 진심인에서 사용할 프로필을 생성해주세요 🥰</h2>
 
-            {/* 닉네임 */}
-            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "100%", width: "400px"}}>
-            <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>닉네임</label>
+            {/* 이름(실명) */}
+            <div style={{ display: "flex", alignItems: "center", marginBottom: "1rem", width: "400px"}}>
+            <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>이름</label>
             <input
                 type="text"
-                placeholder="닉네임을 입력해주세요"
+                placeholder="실명을 입력해주세요"
                 value={userName}
                 onChange={e => setUserName(e.target.value)}
                 style={{
