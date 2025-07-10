@@ -94,19 +94,18 @@ export default function InCategory() {
                                     <div style={{ fontSize: "1.6rem", fontWeight: "bold", marginBottom: "0.9rem", fontFamily: "omyu_pretty"}}>
                                         {q.title}
                                     </div>
-                                    <div className="line-clamp" style={{ fontSize: "1.1rem", color: "#333", fontFamily: "omyu_pretty", marginBottom: "30px", marginRight: "60px"}}>
+                                    <div className="line-clamp" style={{ fontSize: "1.1rem", fontFamily: "omyu_pretty", marginBottom: "30px", marginRight: "60px"}}>
                                         {q.body}
                                     </div>
                                 </div>
                                 <button 
                                     onClick={() => navigate(`/answer/${q.id}`)} 
+                                    className="answer-jb"
                                     style={{
                                         marginLeft: "1rem",
                                         padding: "0.6rem 1rem",
-                                        backgroundColor: "rgb(255, 201, 186)",
                                         border: "none",
                                         borderRadius: "24px",
-                                        color: "white",
                                         cursor: "pointer",
                                         fontSize: "0.8rem",
                                     }}

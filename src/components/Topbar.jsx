@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Topbar() {
     const { message } = useNotification();
     const [showAlertBox, setShowAlertBox] = useState(false);
-   
+
     const [newNotification, setNewNotification] = useState(false);
     const navigate = useNavigate();
     const [keyword, setKeyword] = useState("");
@@ -36,7 +36,7 @@ export default function Topbar() {
     return(
         <div className="topbar-container">
             <div className="topbar-left">
-                <FiSearch size={35} color='#686D76' onClick={handleSearch}/>
+                <FiSearch size={35} className="fi-search" onClick={handleSearch}/>
             </div>
             <input 
                 type="text"

@@ -5,3 +5,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.answer-jb {
+    margin-left: 1rem;
+    padding: 0.6rem 1rem;
+    background-color: rgb(255, 201, 186);
+    border: none;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}

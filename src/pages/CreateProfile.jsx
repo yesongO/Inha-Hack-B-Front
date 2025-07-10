@@ -112,7 +112,7 @@ export default function CreateProfile() {
             <label style={{ display: "block", textAlign: "right", width: "100px", marginRight: "20px" }}>이미지</label>
             <input
                 type="text"
-                placeholder="이미지 주소를 붙여넣어주세요"
+                placeholder="이미지 주소를 붙여넣거나, 빈칸이어도 괜찮아요."
                 value={imageUrl}
                 onChange={e => setImageUrl(e.target.value)}
                 style={{
