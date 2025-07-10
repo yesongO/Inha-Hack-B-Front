@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
+import axios from '../api/axiosInstance';
 
 import Layout from '../components/Layout';
 import Topbar from '../components/Topbar';

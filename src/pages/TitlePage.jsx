@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from '../api/axiosInstance';
 
 import Layout from '../components/Layout';
 
@@ -11,7 +11,6 @@ export default function TitlePage() {
     const navigate = useNavigate();
 
     return (
-        <Layout>
         <div style={{width: "100vw", display:"flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
             <h2 style={{fontFamily: "Ownglyph_ryurue-Rg", fontSize: "3rem", marginBottom: 0}}>진심인에 오신 것을 환영합니다. 🤗</h2>
             <div style={{display: "flex", gap: "30px",}}>
@@ -45,7 +44,6 @@ export default function TitlePage() {
                 </button>
             </div>
         </div>
-        </Layout>
     );
 }
 

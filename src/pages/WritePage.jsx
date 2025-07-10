@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import '../pages/WritePage.css';
 import Layout from '../components/Layout';
 import { useNavigate } from "react-router-dom";
 import { useNotification } from "../components/Notification";
+import axios from '../api/axiosInstance';
 
 export default function WritePage() {
     const navigate = useNavigate();

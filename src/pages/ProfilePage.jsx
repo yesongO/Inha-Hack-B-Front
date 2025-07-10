@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Layout from '../components/Layout';
+import axios from '../api/axiosInstance';
 
 import './ProfilePage.css';
 

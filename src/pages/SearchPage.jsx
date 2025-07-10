@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import axios from 'axios';
 import Layout from '../components/Layout';
 import './SearchPage.css';
+import axios from '../api/axiosInstance';
 
 export default function SearchPage() {
     const { search } = useLocation(); 

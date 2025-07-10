@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
 import Layout from "../components/Layout";
 import "../pages/ViewPage_Q.css";
 import Topbar from '../components/Topbar';
+import axios from '../api/axiosInstance';
 
 export default function ViewPage_Q() {
     const { questionId } = useParams();
