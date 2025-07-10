@@ -54,7 +54,7 @@ export default function AnswerPage() {
         .then(() => {
         alert("답변 등록 완료!");
         setAnswerText("");
-        navigate(`/viewpage-a/${questionId}`); // ✅ 백틱으로 수정
+        navigate(`/viewpage-a/${questionId}`); // 백틱으로
         })
         .catch(err => console.error("POST 오류:", err));
     };
