@@ -127,12 +127,12 @@ export default function ViewPage_Q() {
                 </div>
 
                 <div className="BottomContainer">
-                    {isEditing ? (
+                    {/* {isEditing ? (
                         <button className="EditButton" onClick={handleSave}>저장하기</button>
                     ) : (
                         <button className="EditButton" onClick={handleEdit}>수정하기</button>
                     )}
-                    <button className="DeleteButton" onClick={handleDelete}>삭제하기</button>
+                    <button className="DeleteButton" onClick={handleDelete}>삭제하기</button> */}
                 </div>
 
                 <div className="NoAnswerMsg">

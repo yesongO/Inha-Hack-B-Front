@@ -121,12 +121,12 @@ export default function ViewPage_A() {
           {answer.body}
         </p>
         
-        {parseInt(localStorage.getItem("userId")) === answer.user_id && (
+        {/* {parseInt(localStorage.getItem("userId")) === answer.user_id && (
           <div className="AnswerButtonRow">
             <button className="EditButton" onClick={() => handleAnswerEdit(answer)}>수정하기</button>
             <button className="DeleteButton" onClick={() => handleAnswerDelete(answer.id)}>삭제하기</button>
           </div>
-        )}
+        )} */}
       </div>
     ))
   )}
