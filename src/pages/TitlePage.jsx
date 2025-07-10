@@ -9,6 +9,7 @@ import { BsBookmarkFill } from 'react-icons/bs';
 
 export default function TitlePage() {
     const navigate = useNavigate();
+    console.log("API_BASE", import.meta.env.VITE_API_BASE);
 
     return (
         <div style={{width: "100vw", display:"flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
