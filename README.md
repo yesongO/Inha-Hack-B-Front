@@ -9,7 +9,7 @@
 저희는 그에 걸맞는 분위기의 다크모드를 공들여 구현하였습니다.<br>
 
 ## 🖥️ 프로젝트 스크린샷
-<p align="left">
+<p align="center">
   <img width="420" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a"> 
   <img width="420" alt="jinsim_2" src="https://github.com/user-attachments/assets/717e5bce-9933-474f-9afc-6138b4bddb65">
   <br>
