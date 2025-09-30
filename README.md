@@ -8,23 +8,24 @@
 또한 마음속 깊은 고민은 밤이나 새벽에 더 꺼내게 됩니다.
 그래서 저희는 그에 맞는 분위기를 만들어 주기 위해, 사람들의 진심을 최대한 끌어올리기 위한 다크모드를 구현하였습니다.
 
-## 스크린샷
-<img width="899" height="535" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a" />
-<img width="972" height="574" alt="jinsim_2" src="https://github.com/user-attachments/assets/717e5bce-9933-474f-9afc-6138b4bddb65" />
-<img width="722" height="492" alt="jinsim_3" src="https://github.com/user-attachments/assets/27a6e938-6824-4636-aac1-f870a7caa9a2" />
-<img width="605" height="419" alt="jinsim_4" src="https://github.com/user-attachments/assets/bd2b8d48-b0e7-4b0c-8801-bc12b2146a98" />
-<img width="833" height="529" alt="jinsim_5" src="https://github.com/user-attachments/assets/1b711586-c6de-4c36-9230-4ab5d1264421" />
-<img width="754" height="474" alt="jinsim_6" src="https://github.com/user-attachments/assets/c324de97-1643-407a-93c4-3031300e0da3" />
+## 🖥️ 스크린샷
+<img width="600" height="535" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a" />
+<img width="600" height="574" alt="jinsim_2" src="https://github.com/user-attachments/assets/717e5bce-9933-474f-9afc-6138b4bddb65" />
+<img width="600" height="492" alt="jinsim_3" src="https://github.com/user-attachments/assets/27a6e938-6824-4636-aac1-f870a7caa9a2" />
+<img width="600" height="419" alt="jinsim_4" src="https://github.com/user-attachments/assets/bd2b8d48-b0e7-4b0c-8801-bc12b2146a98" />
+<img width="600" height="529" alt="jinsim_5" src="https://github.com/user-attachments/assets/1b711586-c6de-4c36-9230-4ab5d1264421" />
+<img width="600" height="474" alt="jinsim_6" src="https://github.com/user-attachments/assets/c324de97-1643-407a-93c4-3031300e0da3" />
 
 <br>
 ## 팀원 소개
-**예송**😼(me) : 기획, 디자인, Frontend
-**다솜**🐰 : Frontend
-**서연**🙊 : Backend
-**보성**🐻: Backend
-**채영**🐼: Backend
+
+**예송**😼(me) : 기획, 디자인, Frontend<br>
+**다솜**🐰 : Frontend<br>
+**서연**🙊 : Backend<br>
+**보성**🐻: Backend<br>
+**채영**🐼: Backend<br>
 
 ## Tech
-**Design** : Figma
-**Frontend** : React, Vite, JavaScript
-**Backend** : Django
+**Design** : Figma<br>
+**Frontend** : React, Vite, JavaScript<br>
+**Backend** : Django<br>
