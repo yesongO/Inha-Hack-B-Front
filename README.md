@@ -7,11 +7,15 @@
 단순한 Q&A 게시판이 아닌 사람과 사람 사이에 놓인 진심의 공간입니다.<br>
 특히나 마음속 깊은 고민이 많아지는 밤이나 새벽의 진심들을 위해<br>
 저희는 그에 걸맞는 분위기의 다크모드를 공들여 구현하였습니다.<br>
-
+<br>
+  
 ## 🖥️ 프로젝트 스크린샷
 <p align="center">
-  <img width="420" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a"> 
-  <img width="420" alt="jinsim_2" src="https://github.com/user-attachments/assets/717e5bce-9933-474f-9afc-6138b4bddb65">
+  <img width="420" alt="jinsim_0" src="https://github.com/user-attachments/assets/708c5aca-eaab-495e-84c6-d209d3d389c5">
+  <img width="420" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a">
+  <br>
+  <img width="420" alt="jinsim_22" src="https://github.com/user-attachments/assets/e42254d3-503e-49c2-a399-b49d6ed0d44b">
+  <img width="420" alt="jinsim_23" src="https://github.com/user-attachments/assets/da6bf7ba-de57-4fd0-89d9-76d9187efcb2">
   <br>
   <img width="420" alt="jinsim_3" src="https://github.com/user-attachments/assets/27a6e938-6824-4636-aac1-f870a7caa9a2"> 
   <img width="420" alt="jinsim_4" src="https://github.com/user-attachments/assets/bd2b8d48-b0e7-4b0c-8801-bc12b2146a98">
@@ -28,7 +32,7 @@
 **서연**🙊 : Backend<br>
 **보성**🐻: Backend<br>
 **채영**🐼: Backend<br>
-
+<br>
 ## ⚙️ Tech
 **Design** : Figma<br>
 **Frontend** : React, Vite, JavaScript<br>
