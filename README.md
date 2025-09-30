@@ -10,7 +10,7 @@
 <br>
   
 ## 🖥️ 프로젝트 스크린샷
-<p align="center">
+<p align="left">
   <img width="420" alt="jinsim_0" src="https://github.com/user-attachments/assets/708c5aca-eaab-495e-84c6-d209d3d389c5"> <img width="420" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a">
   <br>
   <img width="420" alt="jinsim_22" src="https://github.com/user-attachments/assets/e42254d3-503e-49c2-a399-b49d6ed0d44b"> <img width="420" alt="jinsim_23" src="https://github.com/user-attachments/assets/da6bf7ba-de57-4fd0-89d9-76d9187efcb2">
@@ -33,3 +33,5 @@
 **Design** : Figma<br>
 **Frontend** : React, Vite, JavaScript<br>
 **Backend** : Django<br>
+
+
