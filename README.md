@@ -11,13 +11,13 @@
   
 ## 🖥️ 프로젝트 스크린샷
 <p align="left">
-  <img width="420" alt="jinsim_0" src="https://github.com/user-attachments/assets/708c5aca-eaab-495e-84c6-d209d3d389c5"> <img width="420" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a">
+  <img width="360" alt="jinsim_0" src="https://github.com/user-attachments/assets/708c5aca-eaab-495e-84c6-d209d3d389c5"> <img width="420" alt="jinsim_1" src="https://github.com/user-attachments/assets/38c64ebb-de24-4597-950c-d32db186dd6a">
   <br>
-  <img width="420" alt="jinsim_22" src="https://github.com/user-attachments/assets/e42254d3-503e-49c2-a399-b49d6ed0d44b"> <img width="420" alt="jinsim_23" src="https://github.com/user-attachments/assets/da6bf7ba-de57-4fd0-89d9-76d9187efcb2">
+  <img width="360" alt="jinsim_22" src="https://github.com/user-attachments/assets/e42254d3-503e-49c2-a399-b49d6ed0d44b"> <img width="420" alt="jinsim_23" src="https://github.com/user-attachments/assets/da6bf7ba-de57-4fd0-89d9-76d9187efcb2">
   <br>
-  <img width="420" alt="jinsim_3" src="https://github.com/user-attachments/assets/27a6e938-6824-4636-aac1-f870a7caa9a2"> <img width="420" alt="jinsim_4" src="https://github.com/user-attachments/assets/bd2b8d48-b0e7-4b0c-8801-bc12b2146a98">
+  <img width="360" alt="jinsim_3" src="https://github.com/user-attachments/assets/27a6e938-6824-4636-aac1-f870a7caa9a2"> <img width="420" alt="jinsim_4" src="https://github.com/user-attachments/assets/bd2b8d48-b0e7-4b0c-8801-bc12b2146a98">
   <br>
-  <img width="420" alt="jinsim_5" src="https://github.com/user-attachments/assets/1b711586-c6de-4c36-9230-4ab5d1264421"> <img width="420" alt="jinsim_6" src="https://github.com/user-attachments/assets/c324de97-1643-407a-93c4-3031300e0da3">
+  <img width="360" alt="jinsim_5" src="https://github.com/user-attachments/assets/1b711586-c6de-4c36-9230-4ab5d1264421"> <img width="420" alt="jinsim_6" src="https://github.com/user-attachments/assets/c324de97-1643-407a-93c4-3031300e0da3">
 </p>
 <br>
 
